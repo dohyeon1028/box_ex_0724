@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* 폰트 적용 */
+@import "reset.css";
+/* reset 코드는 reset.css를 만들어서 @import로 가져온다. css파일을 추가로 만들어서 style.css와 reset.css를 만들어 사용한다. */
+
+#box{
+    width: 100%;
+    background-color: #eee;
+    padding: 200px 0 150px;
+    /* 너비는 웹 전체의 너비이고 , padding 값은 위로 200px, 아래로 150px 좌우로 0이다. */
+}
+
+#box .inner{
+    width: 1180px;
+    margin: 0 auto;
+    /* 
+    1 : 1180px
+    2 : 580px
+    3 : 380px
+    4 : 280px
+    */
+}
+
+#box .inner h1{
+    font: bold 22px/1 "arial";
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
+    /* h1의 font 설정으로 굵은 글씨(bold), font-size는 22px, font-height는 1, font-family는 arial */
+}
+
+#box .inner>h2{
+    /*
+    #box의 자식,손자요소 .inner의 자식요소 h2만(손자는 X)
+    >의 의미는 직계 자식을 의미
+    */
+    font: 16px/1 "arial";
+    color: #777;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#box .inner .wrap{
+    width: 100%;
+}
+
+#box .inner .wrap::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#box .inner .wrap article{
+    width: 280px;
+    float: left;
+    margin-right: 20px;
+}
+
+#box .inner .wrap article:last-child{
+    margin-right: 0;
+}
+
+#box .inner .wrap article .pic{
+    width: 100%;
+    height: 120px;
+    background-color: #555;
+    margin-bottom: 20px;
+    /* 과제할 땐 padding을 넣어볼 것. */
+}
+
+#box .inner .wrap article h2{
+    font: bold 18px/1 "arial";
+    color: #555;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#box .inner .wrap article p{
+    font: 14px/1.2 "arial";
+    color: #444;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#box .inner .wrap article a{
+    font: bold 12px/1 "arial";
+    color: #333;
+    border: 1px solid #888;
+    padding: 5px 20px;
+    display: inline-block;
+    /* 과제할 땐 버튼을 오른쪽으로 이동시켜서 해보기 */
+}
